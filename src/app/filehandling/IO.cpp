@@ -9,4 +9,12 @@ IO::IO(const std ::string &file_path){
       std::cout << "Unable to open the file " <<file_path<<std::endl; 
     }
 }
+fstream IO::getFileStream(){
+    return std::move(file_stream);// return the file stream object more in unique pointers
+}
 
+IO::~IO(){
+    if(file_stream.is_open()){
+        file_stream.close();
+    }
+}
