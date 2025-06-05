@@ -14,11 +14,5 @@ public:
     std :: queue<std::unique_ptr<Task>> taskQueue;
 };
 
-ProcessManagement::ProcessManagement(/* args */)
-{
-}
-
-
-
 
 #endif
