@@ -1,6 +1,6 @@
 #include "ProcessManagement.hpp"
 #include <bits/stdc++.h>
-// #include "../encryptDecrypt/Cryption.hpp"
+#include "../encryptDecrypt/Cryption.hpp"
 
 ProcessManagement::ProcessManagement(){
 
@@ -16,6 +16,6 @@ void ProcessManagement::executeTasks(){
         std::unique_ptr<Task> taskToExecute = std::move(taskQueue.front() );
         taskQueue.pop();
         std::cout<<"Executing task: "<< taskToExecute->toString();
-        executeCryption(taskToExecute->toString)
+        executeCryption(taskToExecute->toString());
     }
 }
